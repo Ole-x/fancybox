@@ -1,0 +1,164 @@
+<h2>Блок</h2>
+<a href="javascript:f_1();">new ru.dvaslona.popups.Popup(); - объявляем объект</a><br/><br/>
+<a href="javascript:f_2();"><b>popup1.show(); - показали Блок</a></b><br/><br/>
+<a href="javascript:f_3();">popup1.hide(); - спрятали Блок</a><br/><br/>
+<a href="javascript:f_4();">popup1.destroy(); - уничтожили Блок</a><br/><br/>
+<h2>Заголовок блока</h2>
+<a href="javascript:f_5();">popup1.setTitle('Какой то заголовок'); - установили заголовок</a><br/><br/>
+<h2>Контент блока</h2>
+<a href="javascript:f_6();">popup1.setContents('Какой то текст'); - установили контент "текст"</a><br/><br/>
+<a href="javascript:f_8();">popup1.setContents('http://popup.lanpicture.com/data/gallery/1.jpg'); - установили контент "картинка"</a><br/><br/>
+<a href="javascript:f_11();">popup1.setContents(['http://popup.lanpicture.com/data/gallery/1.jpg','http://popup.lanpicture.com/data/gallery/2.jpg','http://popup.lanpicture.com/data/gallery/3.jpg']); - установили контент "массив" (пригоден для слайдшоу)</a><br/><br/>
+<a href="javascript:f_12();">popup1.setContents('http://www.adobe.com/jp/events/cs3_web_edition_tour/swfs/perform.swf'); - установили контент "флеш"</a><br/><br/>
+<a href="javascript:f_9();">popup1.setContents('#demoID'); - установили контент "Селектор"</a><br/><br/>
+<a href="javascript:f_10();">popup1.setContents('.democlass'); - установили контент "список селекторов" (пригоден для слайдшоу)</a><br/><br/>
+<h2>Слайдшоу</h2>
+<a href="javascript:f_13();">popup1.slideshow.play();</a><br/><br/>
+<a href="javascript:f_14();">popup1.slideshow.pause();</a><br/><br/>
+<a href="javascript:f_15();">popup1.slideshow.prev();</a><br/><br/>
+<a href="javascript:f_16();">popup1.slideshow.next();</a><br/><br/>
+<a href="javascript:f_20();">Пример с кнопками</a><br/><br/>
+<h2>test модальный</h2>
+<a href="javascript:f_7();">
+popup = new ru.dvaslona.popups.Popup('&lt;div&gt;тест модальный&lt;/div&gt;');<br/>
+popup.show();
+</a>
+<h2>test 2</h2>
+<a href="javascript:f_17();">
+var popup = new ru.dvaslona.popups.Popup();<br/>
+popup.<br/>
+setTitle('Заголовок').<br/>
+setContents('.democlass').<br/>
+show();<br/>
+</a>
+<h2>test 3</h2>
+<a href="javascript:f_18();">
+var popup = new ru.dvaslona.popups.Popup({<br/>
+title: 'Заголовок',<br/>
+contents: 'Контент'<br/>
+});<br/>
+</a>
+<h2>Произвольный блок</h2>
+Заголовок: <input type="text" id="inputtitle"/><br/>
+Содержимое: 
+<textarea id="inputcontent"></textarea>
+<br/>
+<button onclick="f_19();">Показать</button>
+<br/><br/>
+<div id="demoID">
+	<span style="background-color:#FFFF00; color:#FF0000"> Блок с id="demoID" </span>
+</div>
+<div class="democlass">
+	<span style="background-color:#FF0000; color:#FFFF00"> Блок с class="democlass" </span>
+</div>
+<div class="democlass">
+	<span style="background-color:#FF00FF; color:#FFFFFF"> Блок с class="democlass" </span>
+</div>
+<script type="text/javascript">
+	var popup1;
+	
+	function f_1() 
+	{
+		popup1 = new ru.dvaslona.popups.Popup();
+	}
+	function f_2() 
+	{
+		popup1.show();   
+	}
+	function f_3() 
+	{
+		popup1.hide();    
+	}
+	function f_4() 
+	{
+		popup1.destroy();    
+	}
+	function f_5() 
+	{
+		popup1.setTitle('Какой то заголовок');    
+	}
+	function f_6() 
+	{
+		popup1.setContents('Какой то текст');    
+	}
+	function f_8() 
+	{
+		popup1.setContents('http://popup.lanpicture.com/data/gallery/1.jpg');    
+	}
+	function f_9() 
+	{
+		popup1.setContents('#demoID');    
+	}
+	function f_10() 
+	{
+		popup1.setContents('.democlass');    
+	}
+	function f_11() 
+	{
+		a = ['http://popup.lanpicture.com/data/gallery/1.jpg', 'http://popup.lanpicture.com/data/gallery/2.jpg', 'http://popup.lanpicture.com/data/gallery/3.jpg'];
+		popup1.setContents(a);    
+	}
+	function f_12() 
+	{
+		popup1.setContents('http://www.adobe.com/jp/events/cs3_web_edition_tour/swfs/perform.swf');    
+	}
+	
+	function f_13() 
+	{
+		popup1.slideshow.play();   
+	}
+	function f_14() 
+	{
+		popup1.slideshow.pause();   
+	}
+	function f_15() 
+	{
+		popup1.slideshow.prev();   
+	}
+	function f_16() 
+	{
+		popup1.slideshow.next();   
+	}
+	
+	function f_7() 
+	{
+		popup = new ru.dvaslona.popups.Popup('<div>тест модальный</div>');
+		popup.setModal(true);
+		popup.show();
+	}
+	
+	function f_17() 
+	{
+	var popup = new ru.dvaslona.popups.Popup();
+	popup.
+	  setTitle('Заголовок').
+	  setContents('.democlass').
+	  show();
+	}
+	
+	function f_18() 
+	{
+		var popup = new ru.dvaslona.popups.Popup({
+		  title: 'Заголовок',
+		  contents: 'Контент'
+		}).show();
+	}
+	
+	function f_19() 
+	{
+		var popup = new ru.dvaslona.popups.Popup({
+		  title: jQuery('#inputtitle').val(),
+		  contents: jQuery('#inputcontent').val()
+		}).show();
+	}
+	
+	function f_20() 
+	{
+		popup = new ru.dvaslona.popups.Popup({
+		  title: 'Заголовок',
+		  contents: ['/data/gallery/1.jpg', '/data/gallery/2.jpg', '/data/gallery/3.jpg']
+		});
+		popup.buttons = true;  
+		popup.show();
+	}
+</script>

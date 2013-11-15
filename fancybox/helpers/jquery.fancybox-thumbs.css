@@ -1,0 +1,91 @@
+#fancybox-thumbs {
+	position: fixed;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	z-index: 8050;
+}
+
+#fancybox-thumbs.bottom {
+	bottom: 2px;
+}
+
+#fancybox-thumbs.top {
+	top: 2px;
+}
+
+#fancybox-thumbs ul {
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#fancybox-thumbs ul li {
+	float: left;
+	padding: 1px;
+	opacity: 0.5;
+}
+
+#fancybox-thumbs ul li.active {
+	opacity: 0.75;
+	padding: 0;
+	border: 1px solid #fff;
+}
+
+#fancybox-thumbs ul li:hover {
+	opacity: 1;
+}
+
+#fancybox-thumbs ul li a {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #222;
+	background: #111;
+	outline: none;
+}
+
+#fancybox-thumbs ul li img {
+	display: block;
+	position: relative;
+	border: 0;
+	padding: 0;
+}
+
+#fancybox-thumbs .prev a{
+	display: block;
+    width: 36px;
+    height: 34px;
+	text-indent: -9999px;
+	background: url('../fancybox_sprite.png') no-repeat 0 -36px;
+	outline: none;
+	opacity: 0.8;
+}
+#fancybox-thumbs .prev a:hover{
+	opacity: 1;
+}
+
+#fancybox-thumbs .next a{
+	display: block;
+    width: 36px;
+    height: 34px;
+	text-indent: -9999px;
+	background: url('../fancybox_sprite.png') no-repeat 0 -72px;
+	outline: none;
+	opacity: 0.8;
+}
+#fancybox-thumbs .next a:hover{
+	opacity: 1;
+}
+
+#fancybox-thumbs ul:before, 
+#fancybox-thumbs ul:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+#fancybox-thumbs ul:after {
+  clear: both;
+}
